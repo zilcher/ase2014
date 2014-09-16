@@ -70,7 +70,7 @@ int ShowAllCmd(tDataNode *head)
 static tDataNode head[] =
 {
 	{"help","this is help cmd!",Help,&head[1]},
-	{"version","menu program v1.0",NULL,NULL}
+	{"ftp","this is ftp cmd!",NULL,NULL}
 };
 
 /* cmd line begins*/
@@ -79,7 +79,7 @@ main()
 	while(1)
 	{
 		char cmd[CMD_MAX_LEN];
-		printf("Input a cmd number >");
+		printf("Input a cmd >");
 		scanf("%s",cmd);
 		tDataNode *p=FindCmd(head, cmd);
 		if(p== NULL)
